@@ -1,0 +1,51 @@
+/*
+Theme Name: stoves-and-fireplaces
+Description: Oshin Child Theme for maine stoves and fireplaces
+Author: Reach Maine
+Template: oshin
+Version: 1.2
+*/
+
+@import url("../oshin/style.css");
+@import "partials/colors";
+@import "partials/typography";
+@import "partials/oshine";
+
+
+/*** slidebar in oshine slidebar is above main content *** */
+.sb-slidebar { // the sidebar sliding bar for mobil menu
+
+}
+/*  header stuff - here */
+
+/*** styling of content */
+/*** styling of content */
+#content.right-sidebar-page {
+	padding-top: 45px;  // small at mobile in media
+	padding-bottom: 45px;
+}
+/** sidebar
+
+/** footer **/
+
+// reach-bottom-cta
+#reach-bottom-cta{
+	//margin-top: 40px;
+	//margin-bottom: 40px;
+	background-color: $bottom-cta-bkg;
+	.widget {
+    margin-bottom: 0px;
+	}
+}
+// footer
+#footer {
+    a.reach-logo {
+    	color: white;
+    }
+    .reach-logo:before {
+    	content: url('images/reach-favicon.png');
+    	padding-right: 4px;
+    }
+}
+/* *** keep this at the end *** */
+@import "partials/media";
