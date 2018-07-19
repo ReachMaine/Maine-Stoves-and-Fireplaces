@@ -1,0 +1,12 @@
+/* styling for woocommerce */
+
+// single product
+.single-product {
+
+  .product_meta {
+    span {
+      display: block;  // put category & brand on separate lines
+    }
+  }
+
+}
