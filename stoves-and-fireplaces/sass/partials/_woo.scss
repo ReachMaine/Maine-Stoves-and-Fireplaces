@@ -8,7 +8,49 @@
       display: block;  // put category & brand on separate lines
     }
   }
+  .woocommerce-tabs {
+    ul.tabs { // tab headings at top
+      display: flex;
+      li.description_tab,
+      li.additional_information_tab,
+      li.product_docs_tab {
+        flex-grow: 1;
+        //padding-left: 10px;
+        a {
+          font-size: 16px;
+          text-transform: none;
+          text-align: center;
+        }
+      }
+      li.active {
+        a {
+          border-bottom-color: $msf-green!important;
+        }
+      }
+    }
+    .wc-tab {
+      // additional infotab tab content
+      .shop_attributes {
+        th {
+            font-size: 16px;
+            text-transform: none;
+        }
+      }
+      // product documents tab content
+      h3.woocommerce-product-documents-title {
+        display: none;
+      }
+      .woocommerce-product-documents{
+        .ui-accordion-header {
+          font-size: 17px;
+        }
+        .ui-accordion-content {
+          font-size: 16px;
+        }
+      }
+    }
 
+  }
   #rww-under-product-gallery {
     float: left;
   }

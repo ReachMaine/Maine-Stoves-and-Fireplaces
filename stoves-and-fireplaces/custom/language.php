@@ -5,16 +5,16 @@
 		function reach_change_theme_text( $translated_text, $text, $domain ) {
 			 /* if ( is_singular() ) { */
 			    switch ($domain) {
-					/* case 'woocommerce':
+					 case 'woocommerce':
 						switch ( $translated_text ) {
-				            case 'Place order' :
-				                $translated_text = __( 'Make Payment',  'woocommerce'  );
+				            case 'You may also like&hellip;' :
+				                $translated_text = __( 'Do it right',  'woocommerce'  );
 				                break;
-				           case 'Add to cart':
-				            	$translated_text = __( 'Continue to Checkout',  'woocommerce'  );
-				            	break;
+										case 'Additional information' :
+												$translated_text = __( 'Specs',  'woocommerce'  );
+												break;
 				        }
-						break; */
+						break;
 						case 'oshin': {
 							switch ( $translated_text ) {
 									 case 'Category: ' : // remove Category: from front of blog archives.

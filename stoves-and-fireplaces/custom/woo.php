@@ -4,12 +4,14 @@
 add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
 
+    if (!has_term('services', 'product_cat')) { // dont  add product documents tab on services
     // Adds the new tab
-    $tabs['test_tab'] = array(
-        'title'     => __( 'Product Documents', 'woocommerce' ),
-        'priority'  => 50,
-        'callback'  => 'woo_product_document_tab_content'
-    );
+      $tabs['product_docs'] = array(
+          'title'     => __( 'Product Documents', 'woocommerce' ),
+          'priority'  => 50,
+          'callback'  => 'woo_product_document_tab_content'
+      );
+    }
     return $tabs;
 }
 function woo_product_document_tab_content() {
