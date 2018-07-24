@@ -1,24 +1,29 @@
 /* styling for woocommerce */
 
 // single product
-.single-product {
+.single-product .product {  // body class
 
   .product_meta {
     span {
       display: block;  // put category & brand on separate lines
     }
   }
-  .woocommerce-tabs {
+  .woocommerce-tabs { // wrapper around tabs
     ul.tabs { // tab headings at top
       display: flex;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      border-radius: 0px;
       li.description_tab,
       li.additional_information_tab,
-      li.product_docs_tab {
+      li.product_docs_tab,
+      li.contact_tab {
         flex-grow: 1;
         //padding-left: 10px;
         a {
           font-size: 16px;
-          text-transform: none;
+          text-transform: none!important;
           text-align: center;
         }
       }
@@ -27,31 +32,53 @@
           border-bottom-color: $msf-green!important;
         }
       }
+    } // tabs
+    // styles for all the tabs.
+    .woocommerce-Tabs-panel  {
+      padding: 15px;
     }
-    .wc-tab {
-      // additional infotab tab content
-      .shop_attributes {
-        th {
-            font-size: 16px;
-            text-transform: none;
+    // the content of the tabs
+    #tab-description { // additional infotab tab content
+        .shop_attributes {
+          th {
+              font-size: 16px;
+              text-transform: none;
+          }
         }
-      }
-      // product documents tab content
-      h3.woocommerce-product-documents-title {
-        display: none;
-      }
-      .woocommerce-product-documents{
-        .ui-accordion-header {
-          font-size: 17px;
-        }
-        .ui-accordion-content {
-          font-size: 16px;
-        }
-      }
     }
+    #tab-additional_information {
 
-  }
-  #rww-under-product-gallery {
-    float: left;
-  }
-}
+    }
+    #tab-product_docs {
+        // product documents tab content
+        h3.woocommerce-product-documents-title {
+          display: none;
+        }
+        .woocommerce-product-documents { // wrapper
+          .ui-accordion-header {
+            font-size: 17px;
+            border: 0px;
+          }
+          .ui-accordion-content.ui-widget-content {
+            font-size: 16px;
+            border: 0px;
+            text-align: center;
+            ul {
+              list-style: none;
+              li {
+                display: inline-block;
+                padding-right: 10px;
+                a {
+                  padding: 10px 20px;
+                  border: 1px solid grey;
+                } // a
+              } // li
+            } // ul
+          } // accordion-content
+        } // docs wrapper
+      } // product document tab
+      #tab-contact  {
+        padding: 20px;
+      }
+  } // woocommerce-tabs
+} // single product
