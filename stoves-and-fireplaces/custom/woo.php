@@ -4,7 +4,7 @@
 add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
 
-    if (!has_term('services', 'product_cat')) { // dont  add product documents tab on services
+    if (!has_term('services', 'product_cat') && false) { // dont  add product documents tab on services
     // Adds the new tab
       $tabs['product_docs'] = array(
           'title'     => __( 'Documents', 'woocommerce' ),
@@ -46,4 +46,14 @@ echo do_shortcode('[product_brand width="120px" class="alignright"]');
 add_filter( 'wc_product_documents_link_target', 'wc_product_documents_open_link_in_new_window', 10, 4 );
 function wc_product_documents_open_link_in_new_window( $target, $product, $section, $document ) {
 	return '_blank';
+}
+
+// dont show brand in product meta
+add_action( 'wp_head', 'remove_brand_product_meta' );
+function remove_brand_product_meta(){
+  //if (is_plugin_active('woocommerce-brands')) {
+  global $WC_Brands;
+  if ($WC_Brands) {
+  	remove_action( 'woocommerce_product_meta_end', array( $WC_Brands, 'show_brand' ) );
+  }
 }

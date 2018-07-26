@@ -6,13 +6,21 @@
 			 /* if ( is_singular() ) { */
 			    switch ($domain) {
 					 case 'woocommerce':
-						switch ( $translated_text ) {
+							switch ( $translated_text ) {
 				            case 'You may also like&hellip;' :
 				                $translated_text = __( 'Do it right',  'woocommerce'  );
 				                break;
 										case 'Additional information' :
 												$translated_text = __( 'Specs',  'woocommerce'  );
 												break;
+										case 'Category:':
+											$translated_text = "";
+											break;
+										case 'Categories:':
+											//if (is_singular()) {
+												$translated_text = "";
+											//}
+											break;
 				        }
 						break;
 						case 'oshin': {

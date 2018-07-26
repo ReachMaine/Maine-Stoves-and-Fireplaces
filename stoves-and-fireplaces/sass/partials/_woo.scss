@@ -1,84 +1,95 @@
 /* styling for woocommerce */
 
 // single product
-.single-product .product {  // body class
+.woocommerce.single-product .product {  // body class
+  .product-single-boxed-content {
+    margin-bottom: 0px;
 
-  .product_meta {
-    span {
-      display: block;  // put category & brand on separate lines
-    }
-  }
-  .woocommerce-tabs { // wrapper around tabs
-    ul.tabs { // tab headings at top
-      display: flex;
-      border-top: 0px;
-      border-left: 0px;
-      border-right: 0px;
-      border-radius: 0px;
-      li.description_tab,
-      li.additional_information_tab,
-      li.product_docs_tab,
-      li.contact_tab {
-        flex-grow: 1;
-        //padding-left: 10px;
-        a {
-          font-size: 16px;
-          text-transform: none!important;
-          text-align: center;
-        }
+    .product_meta {
+      span {
+        display: block;  // put category & brand on separate lines
       }
-      li.active {
-        a {
-          border-bottom-color: $msf-green!important;
-        }
-      }
-    } // tabs
-    // styles for all the tabs.
-    .woocommerce-Tabs-panel  {
-      padding: 15px;
     }
-    // the content of the tabs
-    #tab-description { // additional infotab tab content
-        .shop_attributes {
-          th {
-              font-size: 16px;
-              text-transform: none;
-          }
-        }
-    }
-    #tab-additional_information {
-
-    }
-    #tab-product_docs {
-        // product documents tab content
-        h3.woocommerce-product-documents-title {
-          display: none;
-        }
-        .woocommerce-product-documents { // wrapper
-          .ui-accordion-header {
-            font-size: 17px;
-            border: 0px;
-          }
-          .ui-accordion-content.ui-widget-content {
+    .woocommerce-tabs { // wrapper around tabs
+      ul.tabs { // tab headings at top
+        display: flex;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-radius: 0px;
+        li.description_tab,
+        li.additional_information_tab,
+        li.product_docs_tab,
+        li.contact_tab {
+          flex-grow: 1;
+          //padding-left: 10px;
+          a {
             font-size: 16px;
-            border: 0px;
+            text-transform: none!important;
             text-align: center;
-            ul {
-              list-style: none;
-              li {
-                display: inline-block;
-                padding-right: 10px;
-                a {
-                  padding: 10px 20px;
-                  border: 1px solid grey;
-                } // a
-              } // li
-            } // ul
-          } // accordion-content
-        } // docs wrapper
-      } // product document tab
+          }
+        }
+        li.active {
+          a {
+            border-bottom-color: $msf-green!important;
+          }
+        }
+      } // tabs
+      // styles for all the tabs.
+      .woocommerce-Tabs-panel  {
+        padding: 15px;
+        margin-bottom: 0px!important;
+      }
+      // the content of the tabs
+      #tab-description { // additional infotab tab content
+          .shop_attributes {
+            th {
+                font-size: 16px;
+                text-transform: none;
+            }
+          }
+      }
+      #tab-additional_information {
+
+      }
+      #tab-product_docs {
+          // product documents tab content
+
+        } // product document tab
       #tab-contact  {
         padding: 20px;
+        .nf-form-cont {
+          max-width: 400px;
+          margin: auto;
+        }
       }
-  } // woocommerce-tabs
+    } // woocommerce-tabs
+
+    // product documments stuff
+    h3.woocommerce-product-documents-title {
+      display: none;
+    }
+    .woocommerce-product-documents { // wrapper
+      .ui-accordion-header {
+        font-size: 17px;
+        border: 0px;
+      }
+      .ui-accordion-content.ui-widget-content {
+        font-size: 16px;
+        border: 0px;
+        text-align: center;
+        ul {
+          list-style: none;
+          li {
+            display: inline-block;
+            padding-right: 10px;
+            a {
+              padding: 10px 20px;
+              border: 1px solid grey;
+            } // a
+          } // li
+        } // ul
+      } // accordion-content
+    } // docs wrapper
+  }
 } // single product
