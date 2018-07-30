@@ -4,15 +4,6 @@
 add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
 
-    if (!has_term('services', 'product_cat') && false) { // dont  add product documents tab on services
-    // Adds the new tab
-      $tabs['product_docs'] = array(
-          'title'     => __( 'Documents', 'woocommerce' ),
-          'priority'  => 50,
-          'callback'  => 'woo_product_document_tab_content'
-      );
-    } // end if services
-
     $tabs ['contact'] = array(
         'title'     => __( 'Contact', 'woocommerce' ),
         'priority'  => 50,
@@ -21,10 +12,6 @@ function woo_new_product_tab( $tabs ) {
     return $tabs;
 }
 
-function woo_product_document_tab_content() {
-    // The  documents tab content
-    echo do_shortcode('[woocommerce_product_documents]');
-}
 function woo_contact_tab_content() {
     // The contact tab content
     echo do_shortcode('[ninja_form id=2]');
@@ -83,3 +70,6 @@ function pippin_filter_content_sample($content) {
 	return $content;
 }
 add_filter('the_content', 'pippin_filter_content_sample');
+
+// remove the default order ddl
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
