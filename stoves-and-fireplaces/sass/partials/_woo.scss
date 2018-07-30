@@ -93,3 +93,15 @@
     } // docs wrapper
   }
 } // single product
+// single product in category of product_cat_services
+.woocommerce.single-product.product_cat_services {
+    #content #content-wrap .product {
+      .images {
+        width: 30%;
+        max-width: 300px;
+      }
+      div.summary {
+        width: 65%;
+      }
+    }
+}

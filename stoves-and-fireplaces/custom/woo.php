@@ -57,3 +57,19 @@ function remove_brand_product_meta(){
   	remove_action( 'woocommerce_product_meta_end', array( $WC_Brands, 'show_brand' ) );
   }
 }
+
+// put category in body tag...
+// add taxonomy term to body_class
+function woo_custom_taxonomy_in_body_class( $classes ){
+  if( is_singular( 'product' ) )
+  {
+    $custom_terms = get_the_terms(0, 'product_cat');
+    if ($custom_terms) {
+      foreach ($custom_terms as $custom_term) {
+        $classes[] = 'product_cat_' . $custom_term->slug;
+      }
+    }
+  }
+  return $classes;
+}
+add_filter( 'body_class', 'woo_custom_taxonomy_in_body_class' );
