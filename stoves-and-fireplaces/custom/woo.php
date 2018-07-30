@@ -73,3 +73,13 @@ function woo_custom_taxonomy_in_body_class( $classes ){
   return $classes;
 }
 add_filter( 'body_class', 'woo_custom_taxonomy_in_body_class' );
+
+// add product documents to the end of products
+function pippin_filter_content_sample($content) {
+	if( is_singular('product') && is_main_query() ) {
+		$new_content = do_shortcode('[woocommerce_product_documents]');
+		$content .= $new_content;
+	}
+	return $content;
+}
+add_filter('the_content', 'pippin_filter_content_sample');
