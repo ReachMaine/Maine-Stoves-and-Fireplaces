@@ -26,7 +26,6 @@ function msfp_add_brand_image() {
 echo do_shortcode('[product_brand width="120px" class="alignright"]');
 }
 
-
 /**
  * Opens all product documents links in new window/tabs
  */

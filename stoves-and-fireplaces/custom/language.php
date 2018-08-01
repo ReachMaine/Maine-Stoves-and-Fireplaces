@@ -11,7 +11,7 @@
 				                $translated_text = __( 'Do it right',  'woocommerce'  );
 				                break;
 										case 'Additional information' :
-												$translated_text = __( 'Specs',  'woocommerce'  );
+												$translated_text = __( 'Overview',  'woocommerce'  );
 												break;
 										case 'Category:':
 											$translated_text = "";
