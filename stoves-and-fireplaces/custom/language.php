@@ -8,7 +8,7 @@
 					 case 'woocommerce':
 							switch ( $translated_text ) {
 				            case 'You may also like&hellip;' :
-				                $translated_text = __( 'Do it right',  'woocommerce'  );
+				                $translated_text = __( 'Let us help you, do it right',  'woocommerce'  );
 				                break;
 										case 'Additional information' :
 												$translated_text = __( 'Overview',  'woocommerce'  );

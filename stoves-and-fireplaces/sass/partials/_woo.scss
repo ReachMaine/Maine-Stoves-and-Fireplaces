@@ -80,6 +80,7 @@
         text-align: center;
         ul {
           list-style: none;
+          display: flex;
           li {
             display: inline-block;
             padding-right: 10px;
@@ -104,4 +105,9 @@
         width: 65%;
       }
     }
+}
+//
+/* Makes the featured single product image not clickable by changing the pointer. pnly on services */
+.woocommerce.single-product.product_cat_services div.product div.images .woocommerce-product-gallery__wrapper {
+    pointer-events: none;
 }

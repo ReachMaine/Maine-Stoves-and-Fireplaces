@@ -26,6 +26,11 @@ Version: 1.2
 	padding-top: 45px;  // small at mobile in media
 	padding-bottom: 45px;
 }
+#content #content-wrap {
+	a {
+		font-weight: bold; // make links in content bold.
+	}
+}
 /** sidebar
 
 /** footer **/
