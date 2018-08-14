@@ -1,7 +1,14 @@
 /* styling for woocommerce */
-
+.woocommerce-page {
+  .header-hero-section {
+    .hero-section-wrap {
+      background-size: cover!important;
+    }
+  }
+}
 // single product
 .woocommerce.single-product .product {  // body class
+
   .product-single-boxed-content {
     margin-bottom: 0px;
 
@@ -80,13 +87,15 @@
         text-align: center;
         ul {
           list-style: none;
-          display: flex;
+          //display: flex;
+          padding-left: 0px;
           li {
             display: inline-block;
-            padding-right: 10px;
+            //margin-bottom: 0px;
+            padding: 10px 20px;
+            border: 1px solid grey;
             a {
-              padding: 10px 20px;
-              border: 1px solid grey;
+              font-weight: normal!important;
             } // a
           } // li
         } // ul
@@ -107,7 +116,7 @@
     }
 }
 //
-/* Makes the featured single product image not clickable by changing the pointer. pnly on services */
+/* Makes the featured single product image not clickable by changing the pointer. only on services category */
 .woocommerce.single-product.product_cat_services div.product div.images .woocommerce-product-gallery__wrapper {
     pointer-events: none;
 }
