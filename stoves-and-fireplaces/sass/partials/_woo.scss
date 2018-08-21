@@ -1,11 +1,5 @@
 /* styling for woocommerce */
-.woocommerce-page {
-  .header-hero-section {
-    .hero-section-wrap {
-      background-size: cover!important;
-    }
-  }
-}
+
 // single product
 .woocommerce.single-product .product {  // body class
 
@@ -119,4 +113,17 @@
 /* Makes the featured single product image not clickable by changing the pointer. only on services category */
 .woocommerce.single-product.product_cat_services div.product div.images .woocommerce-product-gallery__wrapper {
     pointer-events: none;
+}
+
+// product archives, and shop
+.post-type-archive-product,
+.woocommerce.archive  { // body
+    #header {
+      #header-inner-wrap {
+        #header-wrap{
+          background: url(https://www.mainestoveandfireplace.com/mainestoveandfireplace/wp-content/themes/stoves-and-fireplaces/images/flame-hero-filtered.jpg);
+          background-size: cover;
+        }
+      }
+    }
 }
