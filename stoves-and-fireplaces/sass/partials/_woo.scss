@@ -126,4 +126,15 @@
         }
       }
     }
+    #content {
+      .products-wrap {
+        .products {
+          .product {
+            .product-subtitle {
+                margin-top: -10px;
+            }
+          }
+        }
+      }
+    } // #content
 }
