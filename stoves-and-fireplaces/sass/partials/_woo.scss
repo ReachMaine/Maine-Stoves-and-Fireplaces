@@ -127,6 +127,10 @@
       }
     }
     #content {
+      .woocommerce-result-count {
+        display: none;
+      }
+
       .products-wrap {
         .products {
           .product {
@@ -137,4 +141,15 @@
         }
       }
     } // #content
+}
+.woocommerce.archive.term-services { // body for the SERVICES product archive
+  .products-wrap {
+    .products {
+      .product {
+        .woocommerce-loop-product__title {
+          font-size: 2em;
+        }
+      }
+    }
+  }
 }
