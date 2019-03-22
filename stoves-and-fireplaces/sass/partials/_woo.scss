@@ -1,5 +1,12 @@
 /* styling for woocommerce */
-
+// category archive
+.archive.woocommerce { // for some reason, when reach CTA above content is active, two logos show, hide one of them.
+  .logo {
+    .transparent-logo.light-scheme-logo {
+      display: none;
+    }
+  }
+}
 // single product
 .woocommerce.single-product .product {  // body class
 

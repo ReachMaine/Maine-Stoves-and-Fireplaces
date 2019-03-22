@@ -46,7 +46,7 @@
 		// zig add above content CTA widget
 		if (is_active_sidebar('reach-above-content')) {
  				echo '<div id="reach-above-content-wrap" class="clearfix">';
- 					echo '<div id="reach-above-content" class="be-wrap be-row ">';
+ 					echo '<div id="reach-above-content" class="be-row ">';
  						dynamic_sidebar( 'reach-above-content');
  					echo '</div>';
  				echo '</div>';
