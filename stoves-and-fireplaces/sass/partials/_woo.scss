@@ -81,7 +81,19 @@
       .ui-accordion-header {
         font-size: 17px;
         border: 0px;
+        .ui-accordion-header-icon {
+          display: none;
+        }
       }
+      .ui-accordion-header.ui-accordion-header-active:before {  // open
+         font-family: 'FontAwesome';
+         content: "\f0da";
+       }
+       .ui-accordion-header.ui-accordion-header-collapsed:before {  // closed
+         font-family: 'FontAwesome';
+         content: "\f0d7";
+       }
+
       .ui-accordion-content.ui-widget-content {
         font-size: 16px;
         border: 0px;
