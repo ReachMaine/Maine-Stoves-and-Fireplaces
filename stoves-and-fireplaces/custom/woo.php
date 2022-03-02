@@ -1,7 +1,7 @@
 <?php
 /* custom programing for woocommerce */
 /* add the product document tab */
-add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+//add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
 
     $tabs ['contact'] = array(
